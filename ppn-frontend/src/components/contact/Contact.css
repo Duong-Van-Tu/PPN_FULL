@@ -1,0 +1,464 @@
+.home__contact {
+  margin: 0 4rem 4rem;
+}
+
+.home__contact-top {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.home__contact-top .image {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
+}
+
+.info-company {
+  position: absolute;
+  top: 80px;
+  left: 14px;
+  z-index: 1;
+  width: 340px;
+}
+
+.info-company h2 {
+  font-size: 1.8rem;
+  color: #130f40;
+}
+
+.info-item {
+  font-size: 1.4rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.info-item i {
+  padding-right: 6px;
+}
+
+.info-company p {
+  font-size: 1.4rem;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.home__contact-top .image img {
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+}
+
+.home__contact-top form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
+  padding: 2rem 7%;
+}
+
+.home__contact-top form .btn-base {
+  width: 100%;
+  text-align: center;
+}
+
+.home__contact-top form .btn-base:hover {
+  background: #130f40;
+}
+
+.home__contact-top form h3 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: #130f40;
+}
+
+.home__contact-top form .box,
+.home__contact-top form textarea {
+  width: 100%;
+  border-bottom: 0.2rem solid #130f40;
+  border-width: 0.1rem;
+  font-size: 1.6rem;
+  text-transform: none;
+  color: #130f40;
+  padding: 1.2rem 0;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+/* .home__contact-top form select :first-child {
+  text-align: center;
+} */
+.home__contact-top form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.home__contact-title {
+  font-size: 3rem;
+  color: #130f40;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+/* Card */
+.card-contact {
+  height: 440px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s ease;
+  margin: 0 20px;
+}
+
+.card-contact::before {
+  height: 190px;
+  width: calc(100% + 100px);
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  border-radius: 4px 4px 100% 100%;
+  transition: all 0.4s ease-out;
+  top: 0;
+}
+
+.close {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  background-image: url("https://rafaelalvucas.github.io/assets/icons/misc/cross.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+
+.close:hover {
+  background-size: 100%;
+  opacity: 0.8;
+}
+
+.contact-article {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-article h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 2.6rem;
+  letter-spacing: 0.5px;
+}
+
+.contact-article .title {
+  color: white;
+  padding: 10px;
+  letter-spacing: 0.8px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+
+.contact-article .desc {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 24px;
+  color: #130f40;
+  height: 90px;
+  transition: all 0.4s ease-out;
+}
+
+.contact-article .pic {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 20px 0;
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+  transition: all 0.6s ease;
+}
+
+.contact-article .pic img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.contact-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  z-index: 1;
+}
+
+.contact-actions .btn-contact {
+  border: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: calc(50% - 1px);
+  height: 36px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+  color: #4481eb;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 0.5px;
+  background: rgba(68, 129, 235, 0.08);
+  text-decoration: none;
+}
+
+.contact-actions .btn-contact span {
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-actions .btn-contact .icon {
+  width: 10px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-actions .btn-contact::before {
+  content: "";
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background: #4481eb;
+  transition: all 0.4s ease;
+  bottom: 0;
+  opacity: 0.2;
+}
+
+.contact-actions .btn-contact:focus {
+  outline: 0;
+}
+
+.contact-actions .btn-contact:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-actions .btn-contact:hover span {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-actions .btn-contact:hover .icon {
+  width: 22px;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-actions .btn-contact:hover:nth-child(3) .icon {
+  width: 18px;
+}
+
+.contact-actions .btn-contact:hover::before {
+  height: 100%;
+}
+
+.contact-actions .btn-contact.clicked span {
+  display: none;
+}
+
+.contact-actions .btn-contact.clicked .icon {
+  width: 22px;
+  opacity: 1;
+  animation: icon 0.5s ease forwards;
+}
+
+@keyframes icon {
+  0% {
+    width: 22px;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    width: 22px;
+  }
+}
+
+.contact-actions .btn-contact.clicked::before {
+  opacity: 0.3;
+  height: 100%;
+}
+
+.card-contact:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-contact:hover::before {
+  height: 100%;
+  border-radius: 4px;
+}
+.card-contact:hover .desc a {
+  color: white;
+}
+
+.card-contact:hover .pic {
+  box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+.card-contact:hover .pic img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.card-contact.closed {
+  min-width: 120px;
+  max-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+
+.card-contact.closed .title,
+.card-contact.closed .desc,
+.card-contact.closed .actions,
+.card-contact.closed .close {
+  display: none;
+}
+
+.card-contact.closed h2 {
+  padding: 0;
+  height: 100%;
+  transform: rotate(-90deg);
+  width: 440px;
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+
+.card-contact.closed .pic {
+  border-radius: 100%;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: -20px;
+  margin: 0;
+  box-shadow: 0;
+  transition: all 0.6s ease;
+}
+.card-contact.closed .pic img {
+  object-fit: cover;
+  height: 100%;
+  transform: translateY(20px);
+}
+
+.card-contact.closed .pic::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  transition: all 0.4s ease;
+  transform: translateY(20px);
+}
+
+.card-contact.closed::before {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.card-contact.closed .arrow {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  bottom: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://rafaelavlucas.github.io/assets/icons/misc/expand.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+
+.card-contact.closed:hover .arrow {
+  background-size: 100%;
+  opacity: 0.6;
+}
+
+.contact-article .desc a {
+  display: block;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.desc a i {
+  padding: 0 4px;
+}
+
+.desc-phone i {
+  color: #238a23;
+}
+
+.desc-mail i {
+  color: #ff0109;
+}
+
+/* PC */
+@media (min-width: 64em) {
+}
+
+/* MOBILE && TABLET */
+@media (max-width: 63.9375em) {
+  .home__banner {
+    height: 60vh;
+  }
+  .slogan-bottom {
+    font-size: 3rem;
+    padding: 0 8px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* MOBILE */
+@media (max-width: 46.1875em) {
+  .home__contact-top .image {
+    display: none;
+  }
+}

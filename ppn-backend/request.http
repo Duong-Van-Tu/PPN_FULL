@@ -1,0 +1,48 @@
+POST http://localhost:4000/api/customer/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg3YTBlMjQ2ZTIyOTI1MWM5ZjQ1MzgiLCJpYXQiOjE2MzYyOTI1ODJ9.QYuWor30Cm_dEMC23P9lpQtO9ZBGEppjCk9Ydpilhd8
+Content-Type: application/json
+
+{
+  "name": "Duong Van Tam",
+  "email": "tam@gmail.com",
+  "phoneNumber": "012233333343"
+ 
+}
+
+###
+GET http://localhost:4000/api/customer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg3YTBlMjQ2ZTIyOTI1MWM5ZjQ1MzgiLCJpYXQiOjE2MzYyOTI1ODJ9.QYuWor30Cm_dEMC23P9lpQtO9ZBGEppjCk9Ydpilhd8
+
+
+
+###
+PUT http://localhost:4000/api/customer/edit/6188ebf90ac097c3d50f31a0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg3YTBlMjQ2ZTIyOTI1MWM5ZjQ1MzgiLCJpYXQiOjE2MzYyOTI1ODJ9.QYuWor30Cm_dEMC23P9lpQtO9ZBGEppjCk9Ydpilhd8
+Content-Type: application/json
+
+{
+  "name": "Duong Van Name",
+  "email": "tam@gmail.com",
+  "phoneNumber": "012233333343",
+  "service": "Vận Chuyển Đường Bộ",
+  "message": "Duong Van Tam Rat Dep Trai"
+}
+
+###
+DELETE  http://localhost:4000/api/customer/destroy/6185004ef0c2cfc1641ef2d3
+
+
+
+###
+POST http://localhost:4000/api/user/register
+Content-Type: application/json
+
+{
+  "email": "ppn.logistics88@gmail.com",
+  "password": "@adminppnLogistics"
+ 
+}
+
+###
+GET http://localhost:4000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg3YTBlMjQ2ZTIyOTI1MWM5ZjQ1MzgiLCJpYXQiOjE2MzYyOTI1ODJ9.QYuWor30Cm_dEMC23P9lpQtO9ZBGEppjCk9Ydpilhd8

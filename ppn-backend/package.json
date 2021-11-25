@@ -1,0 +1,38 @@
+{
+  "name": "ppn-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-sequence": "^5.3.1",
+    "nodemon": "^2.0.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Duong-Van-Tu/ppn-backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "DuongVanTu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Duong-Van-Tu/ppn-backend/issues"
+  },
+  "homepage": "https://github.com/Duong-Van-Tu/ppn-backend#readme"
+}
