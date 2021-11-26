@@ -1,7 +1,6 @@
 import React, { createContext, useReducer, useState } from "react";
 import { customerReducer } from "../reducers/customerReducer";
 import {
-  apiUrl,
   CUSTOMERS_LOADED_SUCCESS,
   CUSTOMERS_LOADED_ERROR,
   CREATE_CUSTOMER,
@@ -35,9 +34,9 @@ const CustomerContextProvider = ({ children }) => {
     try {
       let response;
       if (name) {
-        response = await axios.get(`${apiUrl}/customer?name=${name}`);
+        response = await axios.get(`api/customer?name=${name}`);
       } else {
-        response = await axios.get(`${apiUrl}/customer?page=${page}`);
+        response = await axios.get(`api/customer?page=${page}`);
       }
       if (response.data.success) {
         dispatch({
@@ -57,7 +56,7 @@ const CustomerContextProvider = ({ children }) => {
   const getCustomerTrash = async (page) => {
     try {
       const response = await axios.get(
-        `${apiUrl}/customer/trash?&page=${page}`
+        `api/customer/trash?&page=${page}`
       );
       if (response.data.success) {
         dispatch({
@@ -77,7 +76,7 @@ const CustomerContextProvider = ({ children }) => {
   const addCustomer = async (newCustomer) => {
     try {
       const response = await axios.post(
-        `${apiUrl}/customer/create`,
+        `api/customer/create`,
         newCustomer
       );
       if (response.data.success) {
@@ -102,7 +101,7 @@ const CustomerContextProvider = ({ children }) => {
   const deleteCustomer = async (customerId) => {
     try {
       const response = await axios.delete(
-        `${apiUrl}/customer/delete/${customerId}`
+        `api/customer/delete/${customerId}`
       );
       if (response.data.success) {
         dispatch({
@@ -122,7 +121,7 @@ const CustomerContextProvider = ({ children }) => {
   const destroyCustomer = async (customerId) => {
     try {
       const response = await axios.delete(
-        `${apiUrl}/customer/destroy/${customerId}`
+        `api/customer/destroy/${customerId}`
       );
       if (response.data.success) {
         dispatch({
@@ -142,7 +141,7 @@ const CustomerContextProvider = ({ children }) => {
   const restoreCustomer = async (customerId) => {
     try {
       const response = await axios.patch(
-        `${apiUrl}/customer/restore/${customerId}`
+        `api/customer/restore/${customerId}`
       );
       if (response.data.success) {
         dispatch({
@@ -162,7 +161,7 @@ const CustomerContextProvider = ({ children }) => {
   const updateCustomer = async (updatedCustomer) => {
     try {
       const response = await axios.put(
-        `${apiUrl}/customer/edit/${updatedCustomer._id}`,
+        `api/customer/edit/${updatedCustomer._id}`,
         updatedCustomer
       );
       if (response.data.success) {

@@ -1,7 +1,7 @@
 import { createContext, useReducer, useEffect } from "react";
 import { authReducer } from "../reducers/authReducer";
 import setAuthToken from "../utils/setAuthToken";
-import { apiUrl, LOCAL_STORAGE_TOKEN_NAME, SET_AUTH } from "./constants";
+import {LOCAL_STORAGE_TOKEN_NAME, SET_AUTH } from "./constants";
 import axios from "axios";
 
 export const AuthContext = createContext();
@@ -22,7 +22,7 @@ const AuthContextProvider = ({ children }) => {
     }
 
     try {
-      const response = await axios.get(`${apiUrl}/user`);
+      const response = await axios.get(`api/user`);
       if (response.data.success) {
         dispatch({
           type: SET_AUTH,
@@ -46,7 +46,7 @@ const AuthContextProvider = ({ children }) => {
   //login
   const loginUser = async (userFormData) => {
     try {
-      const response = await axios.post(`${apiUrl}/user/login`, userFormData);
+      const response = await axios.post(`api/user/login`, userFormData);
       if (response.data.success) {
         localStorage.setItem(
           LOCAL_STORAGE_TOKEN_NAME,
@@ -68,7 +68,7 @@ const AuthContextProvider = ({ children }) => {
   const registerUser = async (userFormData) => {
     try {
       const response = await axios.post(
-        `${apiUrl}/user/register`,
+        `api/user/register`,
         userFormData
       );
       if (response.data.success) {
